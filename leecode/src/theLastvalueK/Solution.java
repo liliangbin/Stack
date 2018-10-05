@@ -1,5 +1,8 @@
 package theLastvalueK;
 
+import java.util.List;
+import java.util.Stack;
+
 /**
  * @author liliangbin dumpling1520@gmail.com
  * @date 2018/9/21  22:06
@@ -37,23 +40,19 @@ public class Solution {
     }
 
     public ListNode Reverse(ListNode head) {
-        ListNode tempNode = new ListNode(3);
-        ListNode tailNode = head;
-        tempNode.val=head.val;
-        tempNode.next=head.next;
-        tailNode.val = 3;
-        tempNode.val = 4;
-        System.out.println("tailNode=====>" + tailNode.val + "\n" + "tempnode====>" + tempNode.val);
 
-        tailNode.next = null;
-/*
-        while (head.next!=null){
+            ListNode newList = null;
+            if (head==null || head.next ==null)
+                return head;
+            while (head!=null){
+                ListNode temp = head.next;
+                head.next = newList;
+                newList = head;
+                head = temp;
+            }
+            return newList;
+        }
 
-            tempNode = head;
-            tempNode.next = tailNode;
-            tailNode = tempNode;
-            head = head.next;
-        }*/
-        return head;
-    }
+
+
 }
