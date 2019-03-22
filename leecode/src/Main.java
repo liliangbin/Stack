@@ -1,9 +1,7 @@
-import chapaterOne.Dumplicates;
-
 import java.util.Stack;
 
-import static chapterSix.Solution.printStack;
-import static chapterSix.Solution.printStackByFor;
+import static jianzhi.chapterSix.Solution.printStack;
+import static jianzhi.chapterSix.Solution.printStackByFor;
 
 public class Main {
 
